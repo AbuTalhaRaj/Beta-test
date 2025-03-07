@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Favicon -->
     <link rel="icon" href="https://s3.gifyu.com/images/bbNFx.jpg" type="image/png" sizes="32x32">
     
     <title>Chinta Prokash</title>
     <style>
-        /* সাধারণ স্টাইল */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -18,7 +16,6 @@
             scroll-behavior: smooth;
         }
 
-        /* হেডার স্টাইল */
         header {
             background: url('https://s3.gifyu.com/images/bb3Rb.png') no-repeat center center/cover;
             color: white;
@@ -55,7 +52,6 @@
             color: #FFFF00;
         }
 
-        /* ট্রান্সলেটর বোতাম */
         .translate-btn {
             position: fixed;
             top: 10px;
@@ -72,7 +68,6 @@
             background: #e68900;
         }
 
-        /* প্রতিটি সেকশনের আলাদা ব্যাকগ্রাউন্ড */
         section {
             padding: 60px 5%;
             font-size: 18px;
@@ -86,7 +81,6 @@
             min-height: 900px;
         }
         
-        /* 🔵 ব্যাকগ্রাউন্ড থ্রিডি কালার চেঞ্জ (প্রতি 1 সেকেন্ডে) */
         @keyframes backgroundChange {
             0% { background-color: #fc913a; }
             25% { background-color: #000000; }
@@ -95,7 +89,6 @@
             100% { background-color: #ff4e50; }
         }
 
-        /* 🚀 থ্রিডি ব্যাকগ্রাউন্ড ইফেক্ট */
         #about, #team, #members, #contact {
             animation: backgroundChange 15s infinite alternate ease-in-out;
             transition: all 0.5s ease-in-out;
@@ -104,7 +97,6 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
         }
 
-        /* 🎨 এক্টিভিটি সেকশন স্টাইল */
         #activity {
             text-align: center;
             padding: 50px 5%;
@@ -112,7 +104,6 @@
             color: white;
         }
 
-        /* 🚀 স্লাইডার ডিজাইন */
         .slider {
             width: 80%;
             max-width: 800px;
@@ -123,22 +114,19 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* 🖼️ ইমেজ কন্টেইনার */
         .slides {
             display: flex;
             width: 100%;
             height: 100%;
-            animation: slideAnimation 50s infinite ease-in-out;
+            animation: slideAnimation 100s infinite ease-in-out;
         }
 
-        /* 📸 ইমেজ স্টাইল */
         .slides img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        /* 🎞️ স্লাইডিং এনিমেশন */
         @keyframes slideAnimation {
             0% { transform: translateX(0%); }
             10% { transform: translateX(-100%); }
@@ -153,7 +141,6 @@
             100% { transform: translateX(0%); }
         }
         
-        /* ফুটার */
         footer {
             background: #007bff;
             color: white;
@@ -319,8 +306,7 @@
         <p id="credits-title">ডিজাইন এবং ডেভেলপমেন্ট: <strong>তালহা</strong></p>
     </footer>
 
-    <script>
-        // Smooth scrolling for navigation links
+</script>
         document.querySelectorAll('nav ul li a').forEach(anchor => {
             anchor.addEventListener('click', function(event) {
                 event.preventDefault();
@@ -329,7 +315,7 @@
 
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 0, // Offset for better view
+                        top: targetElement.offsetTop - 0,
                         behavior: 'smooth'
                     });
                 }
