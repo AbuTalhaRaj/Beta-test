@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://s3.gifyu.com/images/bbNFx.jpg" type="image/png" sizes="32x32">
+    
+    <title>Chinta Prokash</title>
+    <style>
+        /* সাধারণ স্টাইল */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+
+        /* হেডার স্টাইল */
+        header {
+            background: url('https://s3.gifyu.com/images/bb3Rb.png') no-repeat center center/cover;
+            color: white;
+            padding: 150px 10px;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 10px 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #FFFF00;
+        }
+
+        /* ট্রান্সলেটর বোতাম */
+        .translate-btn {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+
+        .translate-btn:hover {
+            background: #e68900;
+        }
+
+        /* প্রতিটি সেকশনের আলাদা ব্যাকগ্রাউন্ড */
+        section {
+            padding: 60px 5%;
+            font-size: 18px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #about, #team, #members, #contact {
+            background-size: cover;
+            background-position: center;
+            min-height: 900px;
+        }
+        
+        /* 🔵 ব্যাকগ্রাউন্ড থ্রিডি কালার চেঞ্জ (প্রতি 1 সেকেন্ডে) */
+        @keyframes backgroundChange {
+            0% { background-color: #fc913a; }
+            25% { background-color: #000000; }
+            50% { background-color: ##008000; }
+            75% { background-color: #3aaf85; }
+            100% { background-color: #ff4e50; }
+        }
+
+        /* 🚀 থ্রিডি ব্যাকগ্রাউন্ড ইফেক্ট */
+        #about, #team, #members, #contact {
+            animation: backgroundChange 15s infinite alternate ease-in-out;
+            transition: all 0.5s ease-in-out;
+            padding: 60px 5%;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        
+
+        /* ফুটার */
+        footer {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .credits {
+            font-size: 14px;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="site-title"></h1>
+        <p id="site-desc">চিন্তাপ্রকাশ একটি জ্ঞানচর্চা কেন্দ্র, যা প্রকৃতি ও মানুষ বিষয়ক গভীর বিশ্লেষণ, সৃজনশীলতা এবং মানবিক দৃষ্টিভঙ্গি নিয়ে কাজ করে। আমাদের দার্শনিক ভিত্তি হলো 'বস্তুনিষ্ঠ ও বিজ্ঞানসম্মত দৃষ্টিভঙ্গি', যা সত্য ও যুক্তিনির্ভর চিন্তার মাধ্যমে সমাজের উন্নতি সাধনে অনুপ্রাণিত করে।</p>
+        <button id="translate-btn" class="translate-btn" onclick="toggleLanguage()">English</button>
+        <nav>
+            <ul>
+                <li><a href="#about" id="nav-about">পরিচিতি</a></li>
+                <li><a href="#team" id="nav-team">নির্বাহী কমিটি</a></li>
+                <li><a href="#members" id="nav-members">সদস্য</a></li>
+                <li><a href="#contact" id="nav-contact">যোগাযোগ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2 id="about-title">আমাদের সম্পর্কে</h2>
+        <p id="about-desc">চিন্তা প্রকাশ শুধুমাত্র একটি প্ল্যাটফর্ম নয়, এটি একটি আন্দোলন, একটি নতুন দৃষ্টিভঙ্গি, যেখানে প্রতিটি চিন্তা এবং কথার মধ্যে পরিবর্তন ও উন্নতির শক্তি নিহিত এবং আমরা বিশ্বাস করি, যে কোনো সমাজের উন্নতির জন্য চিন্তার স্বাধীনতা এবং বিশ্বাসের গুরুত্ব অপরিসীম। এখানে আমরা একে অপরকে বুঝতে, শ্রদ্ধা করতে এবং নতুন ধারণাগুলোর মাধ্যমে অগ্রগতির পথ খুঁজে বের করতে সাহায্য করি।</p>
+    </section>
+
+    <section id="team">
+        <h2 id="team-title">নির্বাহী কমিটি</h2>
+        <div class="team-member">
+            
+            <p><strong id="leader-name-1">নাম: মফিজুর রহমান রুননু</p>
+            <p><strong id="leader-role-1">পদবি: সভাপতি</p>
+        </div>
+        <div class="team-member">
+            
+            <p><strong id="leader-name-2">নাম: এ্যাড. আজিজুল ইসলা</p>
+            <p><strong id="leader-role-2">পদবি: সহ সভাপতি</p>
+        </div>
+        <div class="team-member">
+            
+            <p><strong id="leader-name-3">নাম: ড.এম. আমানুল্লাহ্</p>
+            <p><strong id="leader-role-3">পদবি: সাধারণ সম্পাদক</p>
+        </div>
+        <div class="team-member">
+            
+            <p><strong id="leader-name-4">নাম: মোঃ শরীফ উদ্দীন</p>
+            <p><strong id="leader-role-4">পদবি: সহ সাধারণ সম্পাদক</p>
+        </div>
+        <div class="team-member">
+            
+            <p><strong id="leader-name-5">নাম: প্রভাস আকাশ মল্লিক</p>
+            <p><strong id="leader-role-5">পদবি: তথ্য, প্রচার ও প্রকাশনা সম্পাদক</p>
+        </div>
+        <div class="team-member">
+            
+            <p><strong id="leader-name-6">নাম: এ্যাড, চণ্ডীচরণ মজুমদার</p>
+            <p><strong id="leader-role-6">পদবি: কোষাধ্যক্ষ</p>
+        </div>
+        <div class="team-member">
+            
+            <p><strong id="leader-name-7">নাম: মুস্তাফিজুর রহমান মুস্তাক</p>
+            <p><strong id="leader-role-7">পদবি: স্থায়ী সদস্য</p>
+        </div>
+        <div class="team-member">
+            
+            <p><strong id="leader-name-8">নাম: এ্যাড. শাহরিয়ার বাবু</p>
+            <p><strong id="leader-role-8">পদবি: স্থায়ী সদস্য</p>
+        </div>
+        <div class="team-member">
+            
+            <p><strong id="leader-name-9">নাম: বিপ্লব চন্দ্র রায়</p>
+            <p><strong id="leader-role-9">পদবি: স্থায়ী সদস্য</p>
+        </div>
+    </section>
+
+    <section id="members">
+        <h2 id="members-title">আমাদের সদস্য</h2>
+        <div class="member">
+            
+            <p><strong id="member1-name">নাম: ইলা</p>
+        </div>
+        <div class="member">
+            
+            <p><strong id="member2-name">নাম: ঐশ্বর্য</p>
+        </div>
+        <div class="member">
+            
+            <p><strong id="member3-name">নাম: জাকিয়া</p>
+        </div>
+        <div class="member">
+            
+            <p><strong id="member4-name">নাম: সাকলাইন</p>
+        </div>
+        <div class="member">
+            
+            <p><strong id="member5-name">নাম: বখতিয়ার</p>
+        </div>
+        <div class="member">
+            
+            <p><strong id="member6-name">নাম: সোহানুর</p>
+        </div>
+        <div class="member">
+            
+            <p><strong id="member7-name">নাম: উজ্জল</p>
+        </div>
+        <div class="member">
+            
+            <p><strong id="member8-name">নাম: অনিক</p>
+        </div>
+        <div class="member">
+            
+            <p><strong id="member9-name">নাম: শাহিন আলম রাজ</p>
+        </div>
+        <div class="member">
+            
+            <p><strong id="member10-name">নাম: তালহা</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 id="contact-title">যোগাযোগ</h2>
+        <p id="contact-desc">ইমেইল: contact@chintaprokash.com</p>
+        <p id="contact-desc1">সভাপতি: মফিজুর রহমান রুননু, মোবাইল: ০১৭৩৬২০৮৪০০</p>
+        <p id="contact-desc2">সহ সভাপতি: এ্যাড. আজিজুল ইসলা, মোবাইল: ০১৭১৮৮৩৪৭৫৭</p>
+        <p id="contact-desc3">সাধারণ সম্পাদক: ড.এম. আমানুল্লাহ্, মোবাইল: ০১৭৯৬৫২৮২৪৩</p>
+        <p id="contact-desc4">সহ সাধারণ সম্পাদক: মোঃ শরীফ উদ্দীন, মোবাইল: ০১৭১৮৪৪৫৬৬৯</p>
+        <p id="contact-desc5">তথ্য, প্রচার ও প্রকাশনা সম্পাদক: প্রভাস আকাশ মল্লিক, মোবাইল: ০১৭১৮৭৭৫৬৫৫</p>
+        <p id="contact-desc6">কোষাধ্যক্ষ: এ্যাড, চণ্ডীচরণ মজুমদার, মোবাইল: ০১৭২৯৩১৮৯২২</p>
+        <p id="contact-desc7">স্থায়ী সদস্য: মুস্তাফিজুর রহমান মুস্তাক, মোবাইল: ০১৭১১০৬১৩৬৩</p>
+        <p id="contact-desc8">স্থায়ী সদস্য: এ্যাড. শাহরিয়ার বাবু, মোবাইল: ০১৭১১৯৫৯১২৫</p>
+        <p id="contact-desc9">স্থায়ী সদস্য: বিপ্লব চন্দ্র রায়, মোবাইল: ০১৭১৬০৭৮২১২</p>
+        <button onclick="smoothScrollToContact()"></button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024-2025 Chinta Prokash | All Rights Reserved</p>
+        <p id="credits-title">ডিজাইন এবং ডেভেলপমেন্ট: <strong>তালহা</strong></p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 0, // Offset for better view
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        let isBangla = true;
+        function toggleLanguage() {
+            isBangla = !isBangla;
+            const translations = {
+                
+                "site-desc": ["চিন্তাপ্রকাশ একটি জ্ঞানচর্চা কেন্দ্র, যা প্রকৃতি ও মানুষ বিষয়ক গভীর বিশ্লেষণ, সৃজনশীলতা এবং মানবিক দৃষ্টিভঙ্গি নিয়ে কাজ করে। আমাদের দার্শনিক ভিত্তি হলো 'বস্তুনিষ্ঠ ও বিজ্ঞানসম্মত দৃষ্টিভঙ্গি', যা সত্য ও যুক্তিনির্ভর চিন্তার মাধ্যমে সমাজের উন্নতি সাধনে অনুপ্রাণিত করে।", "Chinta Prokash is a center for intellectual exploration that focuses on deep analysis, creativity, and human perspectives on nature and humanity. Our philosophical foundation is based on an 'objective and scientific perspective,' which inspires societal progress through truth and rational thinking."],
+                "translate-btn": ["English", "বাংলা"],
+                "nav-about": ["পরিচিতি", "About"],
+                "nav-team": ["নির্বাহী কমিটি", "Executive"],
+                "nav-members": ["সদস্য", "Members"],
+                "nav-contact": ["যোগাযোগ", "Contact"],
+                "about-title": ["আমাদের সম্পর্কে", "About Us"],
+                "about-desc": ["চিন্তা প্রকাশ শুধুমাত্র একটি প্ল্যাটফর্ম নয়, এটি একটি আন্দোলন, একটি নতুন দৃষ্টিভঙ্গি, যেখানে প্রতিটি চিন্তা এবং কথার মধ্যে পরিবর্তন ও উন্নতির শক্তি নিহিত এবং আমরা বিশ্বাস করি, যে কোনো সমাজের উন্নতির জন্য চিন্তার স্বাধীনতা এবং বিশ্বাসের গুরুত্ব অপরিসীম। এখানে আমরা একে অপরকে বুঝতে, শ্রদ্ধা করতে এবং নতুন ধারণাগুলোর মাধ্যমে অগ্রগতির পথ খুঁজে বের করতে সাহায্য করি।", "Chinta Prokash is not just a platform; it is a movement, a new perspective, where the power of change and progress lies in every thought and word. We believe that the freedom of thought and the importance of belief are essential for the development of any society. Here, we help each other understand, respect, and find the path to progress through new ideas."],
+                "team-title": ["নির্বাহী কমিটি", "Executive"],
+                "leader-name-1": ["নাম: মফিজুর রহমান রুননু", "Name: Mofizur Rahman Runnu"],
+                "leader-role-1": ["পদবি: সভাপতি", "Role: President"],
+                "leader-name-2": ["নাম: এ্যাড. আজিজুল ইসলাম", "Name: Adv. Azizul Islam"],
+                "leader-role-2": ["পদবি: সহ সভাপতি", "Role: Vice President"],
+                "leader-name-3": ["নাম: ড.এম. আমানুল্লাহ্", "Name: Dr. M. Amanullah"],
+                "leader-role-3": ["পদবি: সাধারণ সম্পাদক", "Role: General Secretary"],
+                "leader-name-4": ["নাম: মোঃ শরীফ উদ্দীন", "Name: Md. Sharif Uddin"],
+                "leader-role-4": ["পদবি: সহ সাধারণ সম্পাদক", "Role: Deputy General Secretary"],
+                "leader-name-5": ["নাম: প্রভাস আকাশ মল্লিক", "Name: Prabhas Akash Mallick"],
+                "leader-role-5": ["পদবি: তথ্য, প্রচার ও প্রকাশনা সম্পাদক", "Role: Information, Publicity and Publication Editor"],
+                "leader-name-6": ["নাম: এ্যাড, চণ্ডীচরণ মজুমদার:", "Name: Ad, Chandicharan Majumdar"],
+                "leader-role-6": ["পদবি: কোষাধ্যক্ষ", "Role: Treasurer"],
+                "leader-name-7": ["নাম: মুস্তাফিজুর রহমান মুস্তাক", "Name: Mostafizur Rahman Mostaq"],
+                "leader-role-7": ["পদবি: স্থায়ী সদস্য", "Role: Permanent Member"],
+                "leader-name-8": ["নাম: এ্যাড. শাহরিয়ার বাবু", "Name: Adv. Shahriar Babu"],
+                "leader-role-8": ["পদবি: স্থায়ী সদস্য", "Role: Permanent Member"],
+                "leader-name-9": ["নাম: বিপ্লব চন্দ্র রায়", "Name: Biplob Chandra Roy"],
+                "leader-role-9": ["পদবি: স্থায়ী সদস্য", "Role: Permanent Member"],
+                "members-title": ["আমাদের সদস্য", "Our Members"],
+                "member1-name": ["নাম: ইলা", "Name: Ela"],
+                "member2-name": ["নাম: ঐশ্বর্য", "Name: Oishworzo"],
+                "member3-name": ["নাম: জাকিয়া", "Name: Jakiya"],
+                "member4-name": ["নাম: সাকলাইন", "Name: Saklain"],
+                "member5-name": ["নাম: বখতিয়ার", "Name: Bakhtiyar"],
+                "member6-name": ["নাম: সোহানুর", "Name: Sohanur"],
+                "member7-name": ["নাম: উজ্জল", "Name: Uzzol"],
+                "member8-name": ["নাম: অনিক", "Name: Anik"],
+                "member9-name": ["নাম: শাহিন আলম রাজ", "Name: Shahin Alam Raj"],
+                "member10-name": ["নাম: তালহা", "Name: Talha"],
+                "contact-title": ["যোগাযোগ", "Contact"],
+                "contact-desc": ["ইমেইল: contact@chintaprokash.com", "Email: contact@chintaprokash.com"],
+                "contact-desc1": ["সভাপতি: মফিজুর রহমান রুননু, মোবাইল: ০১৭৩৬২০৮৪০০", "President: Mofizur Rahman Runnu, Mobile: 01736208400"],
+                "contact-desc2": ["সহ সভাপতি: এ্যাড. আজিজুল ইসলা, মোবাইল: ০১৭১৮৮৩৪৭৫৭", "Vice President: Adv. Azizul Isla, Mobile: 01718834757"],
+                "contact-desc3": ["সাধারণ সম্পাদক: ড.এম. আমানুল্লাহ্, মোবাইল: ০১৭৯৬৫২৮২৪৩", "General Secretary: Dr. M. Amanullah, Mobile: 01796528243"],
+                "contact-desc4": ["সহ সাধারণ সম্পাদক: মোঃ শরীফ উদ্দীন, মোবাইল: ০১৭১৮৪৪৫৬৬৯", "Deputy General Secretary: Md. Sharif Uddin, Mobile: 01718445669"],
+                "contact-desc5": ["তথ্য, প্রচার ও প্রকাশনা সম্পাদক: প্রভাস আকাশ মল্লিক, মোবাইল: ০১৭১৮৭৭৫৬৫৫", "Information, Publicity and Publication Editor: Prabhas Akash Mallick, Mobile: 01718775655"],
+                "contact-desc6": ["কোষাধ্যক্ষ: এ্যাড, চণ্ডীচরণ মজুমদার, মোবাইল: ০১৭২৯৩১৮৯২২", "Treasurer: Ad, Chandicharan Majumder, Mobile: 01729318922"],
+                "contact-desc7": ["স্থায়ী সদস্য: মুস্তাফিজুর রহমান মুস্তাক, মোবাইল: ০১৭১১০৬১৩৬৩", "Permanent Member: Mostafizur Rahman Mostaq, Mobile: 01711061363"],
+                "contact-desc8": ["স্থায়ী সদস্য: এ্যাড. শাহরিয়ার বাবু, মোবাইল: ০১৭১১৯৫৯১২৫", "Permanent Member: Adv. Shahriar Babu, Mobile: 01711959125"],
+                "contact-desc9": ["স্থায়ী সদস্য: বিপ্লব চন্দ্র রায়, মোবাইল: ০১৭১৬০৭৮২১২", "Permanent Member: Biplob Chandra Roy, Mobile: 01716078212"],
+                "credits-title": ["ডিজাইন এবং ডেভেলপমেন্ট: তালহা", "Design and Development: Talha"]
+            };
+
+            for (let id in translations) {
+                document.getElementById(id).innerText = isBangla ? translations[id][0] : translations[id][1];
+            }
+        }
+</script>
+</body>
+</html>
