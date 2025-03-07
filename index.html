@@ -109,9 +109,9 @@
         }
 
         .slider {
-            width: 50%;
-            max-width: 800px;
-            height: 400px;
+            width: auto;
+            max-width: auto;
+            height: auto;
             overflow: hidden;
             margin: 20px auto;
             border-radius: 10px;
@@ -119,19 +119,16 @@
         }
 
         .slides {
-            width: 100%;
-            max-width: 800px;
+            display: flex;
+            width: auto;
             height: auto;
-            position: relative;
-            overflow: hidden;
+            animation: slideAnimation 100s infinite ease-in-out;
         }
 
         .slides img {
-            width: 100%;
+            width: auto;
             height: auto;
-            object-fit: contain; /* ইমেজের আসল অনুপাত ঠিক রাখবে */
-            display: block;
-            transition: opacity 1s ease-in-out;
+            object-fit: cover;
         }
 
         @keyframes slideAnimation {
